@@ -43,15 +43,17 @@ namespace Task
 
 			foreach(var box in ResBoxes)
 			{
+				string marker = String.Format("{0} X {1}", box.Width.ToString(), box.Height.ToString()); 
+
 				Path myPath = new Path();
 				Rect myRectangle = new Rect();
 				RectangleGeometry myRectangleGeometry = new RectangleGeometry();
 
 				myRectangle.Location = new Point(box.Pos_x, box.Pos_y);
 				myRectangle.Size = new Size(box.Width, box.Height);
-
+				
 				myRectangleGeometry.Rect = myRectangle;
-
+				
 				myPath.Fill = Brushes.DarkCyan;
 				myPath.Stroke = Brushes.Black;
 				myPath.StrokeThickness = 1;

@@ -9,6 +9,25 @@
       Title="Page Result">
 
     <Grid x:Name ="myGrid" Margin="40 10 10 10">
-        
+
+        <Grid.Background>
+            <DrawingBrush x:Name="GridBrush" Viewport="0,0,10,10" ViewportUnits="Absolute" TileMode="Tile">
+                <DrawingBrush.Drawing>
+                    <DrawingGroup>
+                        <GeometryDrawing Brush="#CCCCCC">
+                            <GeometryDrawing.Geometry>
+                                <RectangleGeometry Rect="0,0 20,1"/>
+                            </GeometryDrawing.Geometry>
+                        </GeometryDrawing>
+                        <GeometryDrawing Brush="#CCCCCC">
+                            <GeometryDrawing.Geometry>
+                                <RectangleGeometry Rect="0,0 1,20"/>
+                            </GeometryDrawing.Geometry>
+                        </GeometryDrawing>
+                    </DrawingGroup>
+                </DrawingBrush.Drawing>
+            </DrawingBrush>
+        </Grid.Background>
+
     </Grid>
 </Page>
